@@ -1,8 +1,9 @@
 # Quick Commands
+
+show modified files in working directory
 ```bash
 git status
 ```
-show modified files in working directory
 
 ```bash
 git add [file]       ## For a Specific file
@@ -14,66 +15,75 @@ git reset [file]     ## unstage a specific file
 git reset .          ## unstage all the files
 ```
 
+commit your staged content as a new commit
 ```bash
 git commit -m "Message"
 ```
-commit your staged content as a new commit
-
 
 
 # Git Setup and Init
 
 ## STEP 1 --> Global Config
 
+Setting Username
 ```bash
 git config --global user.name "Username"
 ```
-Setting Username
 
+Setting Email
 ```bash
 git congig --global user.email email
 ```
-Setting Email
 
+To Verify Settings (Optional)
 ```bash
 git config --global --list
 ```
-To Verify Settings (Optional)
 
 ## Step 2 --> Initialization
 
+Initialize an existing directory as a Git Repository
 ```bash
 git init
 ```
-initialize an existing directory as a Git Repository
 
+retrieve an entire repository from a hosted location via URL
 ```bash
 git clone [url]
 ```
-retrieve an entire repository from a hosted location via URL
+
 
 ## Step 3 --> Branch and Merge
+list your branches
 ```bash
 git branch
 ```
-list your branches
 
+create a new branch at the current commit
 ```bash
 git branch [branch-name]
 ```
-create a new branch at the current commit
 
+Change the current branch to 'main'
 ```bash
 git branch -M main
 ```
-Change the current branch to 'main'
 
+merge the specified branch's history into the current one
 ```bash
 git merge
 ```
-merge the specified branch's history into the current one
 
+show all commits in the current branch's history
 ```bash
 git log
 ```
-show all commits in the current branch's history
+
+
+## Step by Step pushing the files
+```bash
+git add .                                    ## Add all the files
+git commit -m "message"                      ## Stages the files to push
+git remote add origin [RepositoryURL]        ## Repositiory URL
+git branch -M main                           ## Changing branch to main
+git push -u origin main                      ## Pushing to Repositiory
